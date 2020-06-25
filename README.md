@@ -1,4 +1,4 @@
-### What is dwm? Source: [their website](https://dwm.suckless.org/)
+### What is dwm? See their [website](https://dwm.suckless.org/)
 > dwm is an extremely fast, small, and dynamic window manager for X.
 
 ### Why?
@@ -8,5 +8,12 @@
   * Patching
 * Having a dynamic (instead of manual) tiling WM
 
-### What patches
-dwm is primarily configured by editing source code and applying patches, so I have some that I plan to add. I don't have a complete list yet, but I know that I want swallow, sticky, and alpha at least.
+### What patches?
+
+#### Current
+* Support for [pywal](https://github.com/dylanaraps/pywal), this [patch](https://github.com/dylanaraps/pywal/files/2751496/wal.patch.zip) in this [thread](https://github.com/dylanaraps/pywal/issues/186)
+
+#### Future
+* sticky
+* swallow
+* alpha
