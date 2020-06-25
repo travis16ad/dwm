@@ -12,6 +12,7 @@
 
 #### Current
 * Support for [pywal](https://github.com/dylanaraps/pywal), this [patch](https://github.com/dylanaraps/pywal/files/2751496/wal.patch.zip) in this [thread](https://github.com/dylanaraps/pywal/issues/186)
+* [ru_gaps](https://dwm.suckless.org/patches/ru_gaps/)
 
 #### Future
 * sticky
