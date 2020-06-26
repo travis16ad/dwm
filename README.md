@@ -38,4 +38,5 @@ git push -u origin mastergit push -u origin mastergit push -u origin master
 * [ru_gaps](https://dwm.suckless.org/patches/ru_gaps/)
 * [sticky](https://dwm.suckless.org/patches/sticky/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
+* [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 #### Future
