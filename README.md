@@ -16,5 +16,6 @@
 * [sticky](https://dwm.suckless.org/patches/sticky/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
 * [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
+* Partial support for XF86 keys, allowing volume and brightness control (depends on xbacklight and pactl)
 #### Future
 None planned at the moment.

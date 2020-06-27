@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/<Hey_your_home_folder_here>/.cache/wal/colors-wal-dwm.h"
-
+#include "/home/<your username here>/.cache/wal/colors-wal-dwm.h"
+#include </usr/include/X11/XF86keysym.h>
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx     = 5;                 /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
+static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
@@ -24,6 +24,7 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
+	{ "<your terminal here>",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
@@ -55,8 +56,31 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
+/* pulseaudio pactl and xbacklight used for this */
+static const char *audiomutecmd[]  = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *audiolowercmd[]  = { "pactl", "set-sink-volume", "0", "-2%", NULL };
+static const char *audioraisecmd[]  = { "pactl", "set-sink-volume", "0", "+2%", NULL };
+/* playerctl not working right now
+static const char *termcmd[]  = { "playerctl", NULL };
+static const char *termcmd[]  = { "playerctl", NULL };
+static const char *termcmd[]  = { "playerctl", NULL };
+*/
+/* required a chmod on the backlight brightness file, perform at your own risk */
+static const char *brightnessupcmd[]  = { "xbacklight", "-inc", "5", NULL };
+static const char *brightnessdowncmd[]  = { "xbacklight", "-dec", "5", NULL };
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,                       XF86XK_AudioMute,		spawn,          {.v = audiomutecmd } },
+	{ 0,                       XF86XK_AudioLowerVolume,	spawn,          {.v = audiolowercmd } },
+	{ 0,                       XF86XK_AudioRaiseVolume,	spawn,          {.v = audioraisecmd } },
+	/* playerctl not working right now
+	{ 0,                       XF86XK_AudioPrev,      	spawn,          {.v = dmenucmd } },
+	{ 0,                       XF86XK_AudioPlay,     	spawn,          {.v = dmenucmd } },
+	{ 0,                       XF86XK_AudioNext,      	spawn,          {.v = dmenucmd } },
+	*/
+	{ 0,                       XF86XK_MonBrightnessUp,	spawn,          {.v = brightnessupcmd } },
+	{ 0,                       XF86XK_MonBrightnessDown,	spawn,          {.v = brightnessdowncmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
