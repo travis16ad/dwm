@@ -66,6 +66,9 @@ static const char *termcmd[]  = { "playerctl", NULL };
 /* required a chmod on the backlight brightness file, perform at your own risk */
 static const char *brightnessupcmd[]  = { "xbacklight", "-inc", "5", NULL };
 static const char *brightnessdowncmd[]  = { "xbacklight", "-dec", "5", NULL };
+/* screenshots using maim */
+static const char *scrotselectcmd[]  = { "maim", "-s", "scrot.png", NULL };
+static const char *scrotscreencmd[]  = { "maim", "scrot.png", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -79,6 +82,8 @@ static Key keys[] = {
 	*/
 	{ 0,                       XF86XK_MonBrightnessUp,	spawn,          {.v = brightnessupcmd } },
 	{ 0,                       XF86XK_MonBrightnessDown,	spawn,          {.v = brightnessdowncmd } },
+	{ 0|ShiftMask,			XK_Print,  spawn,          {.v = scrotselectcmd } },
+	{ 0,				XK_Print,  spawn,          {.v = scrotscreencmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

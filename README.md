@@ -2,7 +2,7 @@
 > dwm is an extremely fast, small, and dynamic window manager for X.
 
 ### Installation
-There is one line that is the bane of my fork's existence
+There is one line in `config.h` that is the bane of my fork's existence
 
     #include </home/travis/.cache/wal/colors-wal-dwm.h>
 
@@ -23,4 +23,10 @@ Here is the actual installation process:
 * [sticky](https://dwm.suckless.org/patches/sticky/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
 * [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
-* Partial support for XF86 keys, allowing volume and brightness control (depends on xbacklight and pactl)
+* Partial support for XF86 keys
+  * Volume - pactl
+  * Brightness - xbacklight
+* Screenshot to PNG file using maim
+
+### How do I use this?
+Read `config.h` to see the keybinds
