@@ -24,6 +24,7 @@ Here is the actual installation process:
 * [sticky](https://dwm.suckless.org/patches/sticky/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
 * [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
+* [fancybar](https://dwm.suckless.org/patches/fancybar/)
 * Partial support for XF86 keys
   * Volume - pactl
   * Brightness - xbacklight
