@@ -1,6 +1,24 @@
 /* See LICENSE file for copyright and license details. */
-#include </home/travis/.cache/wal/colors-wal-dwm.h>
 #include </usr/include/X11/XF86keysym.h>
+/* colors */
+
+static const char norm_fg[] = "#dfcdd9";
+static const char norm_bg[] = "#040314";
+static const char norm_border[] = "#9c8f97";
+
+static const char sel_fg[] = "#dfcdd9";
+static const char sel_bg[] = "#172E97";
+static const char sel_border[] = "#dfcdd9";
+
+static const char urg_fg[] = "#dfcdd9";
+static const char urg_bg[] = "#DBA762";
+static const char urg_border[] = "#DBA762";
+static const char *colors[][3]      = {
+    /*               fg           bg         border                         */
+    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
+    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
+    [SchemeUrg] =  { urg_fg,      urg_bg,    urg_border },
+};
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx     = 5;                 /* gaps between windows */
