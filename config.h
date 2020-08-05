@@ -1,18 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 #include </usr/include/X11/XF86keysym.h>
 /* colors */
+static const char norm_fg[] = "#d8dee9";
+static const char norm_bg[] = "#2e3440";
+static const char norm_border[] = "#5e81ac";
 
-static const char norm_fg[] = "#dfcdd9";
-static const char norm_bg[] = "#040314";
-static const char norm_border[] = "#9c8f97";
+static const char sel_fg[] = "#5e81ac";
+static const char sel_bg[] = "#eceff4";
+static const char sel_border[] = "#eceff4";
 
-static const char sel_fg[] = "#dfcdd9";
-static const char sel_bg[] = "#172E97";
-static const char sel_border[] = "#dfcdd9";
-
-static const char urg_fg[] = "#dfcdd9";
-static const char urg_bg[] = "#DBA762";
-static const char urg_border[] = "#DBA762";
+static const char urg_fg[] = "#5e81ac";
+static const char urg_bg[] = "#bf616a";
+static const char urg_border[] = "#bf616a";
 static const char *colors[][3]      = {
     /*               fg           bg         border                         */
     [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
