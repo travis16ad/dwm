@@ -19,6 +19,7 @@
 * [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 * [fancybar](https://dwm.suckless.org/patches/fancybar/)
 * [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
+* [urgentborder](https://dwm.suckless.org/patches/urgentborder/)
 * Partial support for XF86 keys
   * Volume - pactl
   * Brightness - xbacklight
