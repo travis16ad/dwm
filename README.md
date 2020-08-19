@@ -24,7 +24,7 @@
 * Partial support for XF86 keys
   * Volume - pactl
   * Brightness - xbacklight
-* Screenshot to PNG file using maim
+* Screenshot using [Flameshot](https://flameshot.js.org/#/)
 
 ### How do I use this?
 Read `config.h` to see the keybinds.
