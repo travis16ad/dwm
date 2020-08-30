@@ -85,7 +85,7 @@ static const char *brightnessupcmd[]  = { "xbacklight", "-inc", "5", NULL };
 static const char *brightnessdowncmd[]  = { "xbacklight", "-dec", "5", NULL };
 /* screenshots using maim */
 static const char *scrotselectcmd[]  = { "flameshot", "gui", NULL };
-static const char *scrotscreencmd[]  = { "flameshot", "screen", "-c", NULL };
+static const char *scrotscreencmd[]  = { "flameshot", "full", "-c", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
