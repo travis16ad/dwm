@@ -83,7 +83,7 @@ static const char *termcmd[]  = { "playerctl", NULL };
 /* required a chmod on the backlight brightness file, perform at your own risk */
 static const char *brightnessupcmd[]  = { "xbacklight", "-inc", "5", NULL };
 static const char *brightnessdowncmd[]  = { "xbacklight", "-dec", "5", NULL };
-/* screenshots using maim */
+/* screenshots using flameshot */
 static const char *scrotselectcmd[]  = { "flameshot", "gui", NULL };
 static const char *scrotscreencmd[]  = { "flameshot", "full", "-c", NULL };
 
