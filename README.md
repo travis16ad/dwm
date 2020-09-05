@@ -1,12 +1,15 @@
 ### What is dwm? Their [website](https://dwm.suckless.org/)
 > dwm is an extremely fast, small, and dynamic window manager for X.
 
+### Fonts
+I use Symbols Nerd Font (ttf-nerd-fonts-symbols-mono) for some of the tags.
+The main font is JetBrains Mono.
+
 ### Installation
     # cd to whichever directory you would like to contain the source
     git clone https://github.com/travis16ad/dwm
     cd dwm
     # edit config.h
-    # Set your preferred font (use monospace if unsure). It is currently JetBrains Mono.
     # Change the terminal to your terminal. It is currently alacritty.
     # Make any other customizations you want.
     sudo make install
@@ -25,6 +28,8 @@
   * Volume - pactl
   * Brightness - xbacklight
 * Screenshot using [Flameshot](https://flameshot.js.org/#/)
+* ncspot launched in fish in Alacritty by a keybind
+* Firefox, Discord, and ncspot all have predefined tags
 
 ### How do I use this?
 Read `config.h` to see the keybinds.
