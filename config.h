@@ -29,7 +29,7 @@ static const char *fonts[]          = { "JetBrains Mono:size=12", "Symbols Nerd 
 static const char dmenufont[]       = "JetBrains Mono:size=12";
 
 /* tagging */
-static const char *tags[] = { "", "ﭮ", "", "", "", "6", "7", "8", "9" };
+static const char *tags[] = { "", "ﭮ", "", "", "", "", "", "漣", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -40,8 +40,11 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         0,          0,           0,        -1 },
 	{ "discord", NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
 	{ "firefox", NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
+	{ "Pavucontrol", NULL,     NULL,           1 << 7,    0,          0,          -1,        -1 },
 	{ "Alacritty",   NULL,     NULL,           0,         0,          1,          0,        -1 },
-    { "Alacritty",   NULL,    "ncspot",        1 << 4,     0,           1,         0,        -1 },
+    { "Alacritty",   NULL,    "ncspot",        1 << 6,     0,           1,         0,        -1 },
+    { "Alacritty",   NULL,    "nmtui",        1 << 7,     0,           1,         0,        -1 },
+    { "Alacritty",   NULL,    "htop",        1 << 8,     0,           1,         0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
@@ -74,7 +77,14 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 
 /* launching specific terminals */
-static const char *ncspotcmd[] = { "alacritty", "-t", "ncspot", "-e", "fish", "-c", "ncspot" };
+static const char *mpcmd[] = { "alacritty", "-t", "ncspot", "-e", "fish", "-c", "ncspot" };
+static const char *procexpcmd[] = { "alacritty", "-t", "htop", "-e", "fish", "-c", "htop" };
+static const char *networktuicmd[] = { "alacritty", "-t", "nmtui", "-e", "fish", "-c", "nmtui" };
+
+/* launching applications */
+static const char *pavucontrolcmd[]  = { "pavucontrol", NULL };
+static const char *browsercmd[]  = { "firefox", NULL };
+static const char *discordcmd[]  = { "discord-canary", NULL };
 
 /* pulseaudio pactl and xbacklight used for this */
 static const char *audiomutecmd[]  = { "pactl", "set-sink-mute", "0", "toggle", NULL };
@@ -106,7 +116,12 @@ static Key keys[] = {
 	{ 0,                       XF86XK_MonBrightnessDown,	spawn,          {.v = brightnessdowncmd } },
 	{ 0|ShiftMask,			XK_Print,  spawn,          {.v = scrotselectcmd } },
 	{ 0,				XK_Print,  spawn,          {.v = scrotscreencmd } },
-    { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = ncspotcmd } },
+    { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mpcmd } },
+    { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd } },
+    { MODKEY|ShiftMask,             XK_a,      spawn,          {.v = pavucontrolcmd } },
+    { MODKEY|ShiftMask,             XK_d,      spawn,          {.v = discordcmd } },
+    { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = procexpcmd } },
+    { MODKEY|ShiftMask,             XK_n,      spawn,          {.v = networktuicmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

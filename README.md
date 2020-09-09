@@ -28,8 +28,10 @@ The main font is JetBrains Mono.
   * Volume - pactl
   * Brightness - xbacklight
 * Screenshot using [Flameshot](https://flameshot.js.org/#/)
-* ncspot launched in fish in Alacritty by a keybind
-* Firefox, Discord, and ncspot all have predefined tags
+* Cool looking Nerd Font icons for the tags
+* Launch Firefox, Pavucontrol, Discord Canary, htop, ncspot, and nmtui from keybinds
+ * All of these applications have predefined tags
+ * Mnemomic keybinds - (b)rowser, (a)udio, (d)iscord, (p)rocess explorer, (m)usic, and (n)etwork
 
 ### How do I use this?
 Read `config.h` to see the keybinds.
