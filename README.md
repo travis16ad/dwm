@@ -29,7 +29,7 @@ The main font is JetBrains Mono.
   * Brightness - xbacklight
 * Screenshot using [Flameshot](https://flameshot.js.org/#/)
 * Cool looking Nerd Font icons for the tags
-* Launch Firefox, Pavucontrol, Discord Canary, htop, ncspot, and nmtui from keybinds
+* Launch Firefox, Pavucontrol, Discord Canary, gotop, ncspot, and nmtui from keybinds
  * All of these applications have predefined tags
  * Mnemomic keybinds - (b)rowser, (a)udio, (d)iscord, (p)rocess explorer, (m)usic, and (n)etwork
 

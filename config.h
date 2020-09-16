@@ -44,7 +44,7 @@ static const Rule rules[] = {
 	{ "Alacritty",   NULL,     NULL,           0,         0,          1,          0,        -1 },
     { "Alacritty",   NULL,    "ncspot",        1 << 6,     0,           1,         0,        -1 },
     { "Alacritty",   NULL,    "nmtui",        1 << 7,     0,           1,         0,        -1 },
-    { "Alacritty",   NULL,    "htop",        1 << 8,     0,           1,         0,        -1 },
+    { "Alacritty",   NULL,    "gotop",        1 << 8,     0,           1,         0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
@@ -78,7 +78,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 
 /* launching specific terminals */
 static const char *mpcmd[] = { "alacritty", "-t", "ncspot", "-e", "fish", "-c", "ncspot" };
-static const char *procexpcmd[] = { "alacritty", "-t", "htop", "-e", "fish", "-c", "htop" };
+static const char *procexpcmd[] = { "alacritty", "-t", "gotop", "-e", "fish", "-c", "gotop" };
 static const char *networktuicmd[] = { "alacritty", "-t", "nmtui", "-e", "fish", "-c", "nmtui" };
 
 /* launching applications */
